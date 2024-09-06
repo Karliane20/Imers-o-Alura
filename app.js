@@ -29,7 +29,7 @@ function pesquisar() {
             resultados += `
             <div class="item-resultado">
                 <h2>
-                    <a href="#" target="_blank">${dado.nome}</a>
+                    <a href="#" target="">${dado.nome}</a>
                 </h2>
                 <p class="descricao-meta">${dado.descricao}</p>
                 <a href=${dado.link} target="_blank"  class="link-externo">Ver Preço</a>
