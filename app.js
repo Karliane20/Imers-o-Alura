@@ -2,21 +2,44 @@ function pesquisar() {
     // Obtém a seção HTML onde os resultados serão exibidos
     let section = document.getElementById("resultados-pesquisa");
 
+    let campoPesquisa = document.getElementById("campo-pesquisa").value
+
+    // se campoPesquisa for uma string sem nada
+    if (!campoPesquisa) {
+        section.innerHTML = "<p>Nada foi encontrado. Você precisa digitar o nome de uma criptomoeda </p>"
+        return 
+    }
+
+    campoPesquisa = campoPesquisa.toLowerCase()
+
     // Inicializa uma string vazia para armazenar os resultados
     let resultados = "";
+    let nome = ""; 
+    let descricao = "";
+    let tags = "";
 
     // Itera sobre cada dado da lista de dados
     for (let dado of criptomoedas) {
-        // Cria um novo elemento HTML para cada resultado
-        resultados += `
+        nome = dado.nome.toLowerCase()
+        descricao = dado.descricao.toLowerCase()
+        tags = dado.tags.toLowerCase()
+        // se titulo includes campoPesquisa
+        if (nome.includes(campoPesquisa) || descricao.includes(campoPesquisa) || tags.includes(campoPesquisa)) {
+            // cria um novo elemento
+            resultados += `
             <div class="item-resultado">
                 <h2>
                     <a href="#" target="_blank">${dado.nome}</a>
                 </h2>
                 <p class="descricao-meta">${dado.descricao}</p>
-                <a href=${dado.link} target="_blank" class="link-externo">Ver valor da Moeda</a>
+                <a href=${dado.link} target="_blank"  class="link-externo">Ver Preço</a>
             </div>
         `;
+        }
+    }
+
+    if (!resultados) {
+        resultados = "<p>Não foi encontrado. Digite um nome de uma criptomoeda!</p>"
     }
 
     // Atribui os resultados gerados à seção HTML
