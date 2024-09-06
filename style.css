@@ -10,7 +10,7 @@ body {
     justify-content: center; /* Centraliza os itens verticalmente */
     margin: 0; /* Remove a margem padrão */
     padding: 0; /* Remove o padding padrão */
-    background-image: url('img/foto\ 01.jpg');
+     background-image: url('foto 01.jpg');
     background-size: cover; /* Ajusta a imagem para cobrir todo o elemento */
     background-repeat: no-repeat; /* Impede a repetição da imagem */
    
