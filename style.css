@@ -6,7 +6,6 @@ body {
     font-family: "Chakra Petch", sans-serif; /* Define a fonte padrão */
     display: flex; /* Usa Flexbox para layout */
     flex-direction: column; /* Alinha os itens na vertical */
-    height: 100vh; /* Preenche a altura total da viewport */
     align-items: center; /* Centraliza os itens horizontalmente */
     justify-content: center; /* Centraliza os itens verticalmente */
     margin: 0; /* Remove a margem padrão */
@@ -28,9 +27,9 @@ header {
 h1 {
     margin-top: 5rem ;
     font-family: "Roboto, sans-erif" ;
-    font-size: 3rem; /* Tamanho da fonte */
+    font-size: 3.5rem; /* Tamanho da fonte */
     font-weight: 700;
-    color: #f5f5f7; /* Cor do texto */
+    color: #e3d5ca; /* Cor do texto */
     text-align: center; /* Alinha o texto ao centro */
     letter-spacing: 0.4rem; /* Espaçamento entre letras */
 }
@@ -43,9 +42,14 @@ section {
     margin-bottom: 3rem; /* Espaçamento abaixo de cada seção */
 }
 
+section h2{
+    color:#e9edc9;
+    font-family: 'Times New Roman', Times, serif;
+}
+
 section p{
-    color: #e9edc9;
-    font-size: 1.5rem;
+    color: #000;
+    font-size: 1.2rem;
 }
 
 
@@ -144,15 +148,16 @@ div a.link-externo{
 
 /* Estiliza o rodapé da página */
 footer {
-    background-color: #03045e; /* Cor de fundo do rodapé */
-    color: #e9edc9; /* Cor do texto */
-    text-align: center; /* Alinha o texto ao centro */
-    padding: 0; /* Espaçamento interno */
-    width: 100%; /* Largura total da página */
-    position: absolute; /* Posiciona o rodapé */
-    bottom: 0; /* Alinha ao fundo da página */
-    font-size: 1rem; /* Tamanho da fonte */
-}
+    background-color: #03045e;
+    color: #e9edc9;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
 
 @media (max-width: 768px) {
 
